@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">baladi</string>
+    <string name="annuler">Annuler</string>
+    <string-array name="gouvernorats">
+        <item>Choisir un gouvernorat</item>
+        <item>Tunis</item>
+        <item>Ariana</item>
+        <item>Ben Arous</item>
+        <item>Manouba</item>
+        <item>Nabeul</item>
+        <item>Zaghouan</item>
+        <item>Bizerte</item>
+        <item>Béja</item>
+        <item>Jendouba</item>
+        <item>Le Kef</item>
+        <item>Siliana</item>
+        <item>Sousse</item>
+        <item>Monastir</item>
+        <item>Mahdia</item>
+        <item>Sfax</item>
+        <item>Kairouan</item>
+        <item>Kasserine</item>
+        <item>Sidi Bouzid</item>
+        <item>Gabès</item>
+        <item>Médenine</item>
+        <item>Tataouine</item>
+        <item>Gafsa</item>
+        <item>Tozeur</item>
+        <item>Kébili</item>
+    </string-array>
+
+    <string-array name="types_signalement">
+        <item>Choisir un type de problème</item>
+        <item>Déchets et ordures</item>
+        <item>Routes endommagées</item>
+        <item>Éclairage public</item>
+        <item>Fuite d'eau</item>
+        <item>Trottoirs endommagés</item>
+        <item>Espaces verts</item>
+        <item>Autre</item>
+    </string-array>
+
+</resources>

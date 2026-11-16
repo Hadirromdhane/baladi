@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F3F5F3"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Barre supérieure -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="#303030"
+            android:padding="12dp">
+
+            <TextView
+                android:id="@+id/btnAnnuler"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Annuler"
+                android:textColor="#"
+                android:textSize="16sp"
+                android:padding="8dp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Signaler un problème"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:gravity="center" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="☰"
+                android:textColor="#FFFFFF"
+                android:textSize="26sp"
+                android:padding="8dp" />
+
+        </LinearLayout>
+
+        <!-- Bouton signalements sauvegardés -->
+        <Button
+            android:id="@+id/btnSauvegardes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:text="Voir les signalements sauvegardés"
+            android:textAllCaps="false"
+            android:textColor="#303030"
+            android:backgroundTint="#ED1717" />
+
+        <!-- Instruction carte -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="Déplacez la carte pour positionner le marqueur."
+            android:gravity="center"
+            android:textColor="#666666"
+            android:textSize="15sp"
+            android:background="#FFFFFF" />
+
+        <!-- Carte OpenStreetMap -->
+
+        <!-- Localisation -->
+        <org.osmdroid.views.MapView
+            android:id="@+id/mapSignalement"
+            android:layout_width="match_parent"
+            android:layout_height="150dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:orientation="horizontal"
+            android:layout_margin="10dp"
+            android:background="#FFFFFF"
+            android:gravity="center_vertical">
+
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="#303030">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="📍"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Localisation"
+                    android:textColor="#FFFFFF"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
+            <Spinner
+                android:id="@+id/spinnerGouvernorat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:layout_marginBottom="12dp"
+                android:entries="@array/gouvernorats" />
+
+            <EditText
+                android:id="@+id/edtVilleRue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@android:drawable/edit_text"
+                android:hint="Ex : Ville et nom de la rue"
+                android:padding="12dp" />
+
+        </LinearLayout>
+
+        <!-- Type de signalement -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:orientation="horizontal"
+            android:layout_margin="10dp"
+            android:background="#FFFFFF"
+            android:gravity="center_vertical">
+
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="#303030">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ⓘ"
+                    android:textSize="28sp"
+                    android:textColor="#FFFFFF" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Type"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <Spinner
+                android:id="@+id/spinnerType"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="8dp" />
+
+        </LinearLayout>
+
+        <!-- Description -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:orientation="horizontal"
+            android:layout_margin="10dp"
+            android:background="#FFFFFF">
+
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="#303030">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="✎"
+                    android:textSize="28sp"
+                    android:textColor="#FFFFFF" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Description"
+                    android:textColor="#FFFFFF"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/edtDescription"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="top"
+                android:hint="Décrivez le problème..."
+                android:padding="9dp"
+                android:textSize="14sp"
+                android:background="@android:color/transparent"
+                android:inputType="textMultiLine"
+                android:minLines="4" />
+
+        </LinearLayout>
+
+        <!-- Ajouter une photo -->
+        <Button
+            android:id="@+id/btnPhoto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="📷 Ajouter une photo"
+            android:textAllCaps="false"
+            android:textColor="#246B50"
+            android:backgroundTint="#DDF0E4" />
+
+        <!-- Envoyer -->
+        <ImageView
+            android:id="@+id/imgPhoto"
+            android:layout_width="50dp"
+            android:layout_height="67dp"
+            android:layout_margin="20dp"
+            android:contentDescription="Photo du signalement"
+            android:src="@android:drawable/ic_menu_camera" />
+
+        <Button
+            android:id="@+id/btnEnvoyer"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_margin="15dp"
+            android:text="Envoyer le signalement"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#246B50" />
+
+    </LinearLayout>
+
+</ScrollView>

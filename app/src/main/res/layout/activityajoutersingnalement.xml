@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="#FFFFFF">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Signaler un problème"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#263238"
+        android:gravity="center"
+        android:background="#CFD7D7"
+        android:layout_marginBottom="20dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gouernerat"
+        android:textSize="16sp"
+        android:textColor="#263238" />
+
+    <Spinner
+        android:id="@+id/spGouvernorat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Type de problème"
+        android:textSize="16sp"
+        android:textColor="#263238" />
+
+    <Spinner
+        android:id="@+id/spType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Rue"
+        android:textSize="16sp"
+        android:textColor="#263238"
+        android:layout_marginTop="15dp"
+        />
+
+    <EditText
+        android:id="@+id/edtAdresse"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Entrer la rue"
+        android:inputType="text"
+        android:layout_marginBottom="15dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Description"
+        android:textSize="16sp"
+        android:textColor="#263238"
+        android:layout_marginBottom="15dp" />
+
+    <EditText
+        android:id="@+id/edtDescription"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:hint="Décrire le problème..."
+        android:gravity="top"
+        android:inputType="textMultiLine"
+        android:layout_marginBottom="20dp"/>
+
+    <Button
+        android:id="@+id/btnEnvoyer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Envoyer le signalement"
+        android:backgroundTint="#ED1717" />
+
+</LinearLayout>

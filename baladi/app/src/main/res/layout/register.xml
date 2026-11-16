@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="25dp"
+        android:gravity="center_horizontal">
+
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:src="@drawable/logo"
+            android:contentDescription="Logo Baladi"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Créer un compte"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="#009688"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="25dp"/>
+
+        <EditText
+            android:id="@+id/edtNom"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:hint="Nom"
+            android:inputType="textPersonName"
+            android:layout_marginBottom="15dp"/>
+
+        <EditText
+            android:id="@+id/edtPrenom"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:hint="Prénom"
+            android:inputType="textPersonName"
+            android:layout_marginBottom="15dp"/>
+
+        <EditText
+            android:id="@+id/edtEmail"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:hint="Adresse e-mail"
+            android:inputType="textEmailAddress"
+            android:layout_marginBottom="15dp"/>
+
+        <EditText
+            android:id="@+id/edtPassword"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:hint="Mot de passe"
+            android:inputType="textPassword"
+            android:layout_marginBottom="15dp"/>
+
+        <EditText
+            android:id="@+id/edtConfirmPassword"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:hint="Confirmer le mot de passe"
+            android:inputType="textPassword"
+            android:layout_marginBottom="25dp"/>
+
+        <Button
+            android:id="@+id/btnRegister"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="Créer mon compte"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:backgroundTint="#009688"/>
+
+        <TextView
+            android:id="@+id/txtLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Vous avez déjà un compte ? Se connecter"
+            android:textColor="#009688"
+            android:layout_marginTop="20dp"
+            android:clickable="true"
+            android:focusable="true"/>
+
+    </LinearLayout>
+
+</ScrollView>

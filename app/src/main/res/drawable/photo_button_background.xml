@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView android:id="@+id/textView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="&#xA;&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?>&#xA;&lt;shape xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;>&#xA;    &lt;solid android:color=&quot;#246B50&quot; />&#xA;    &lt;corners android:radius=&quot;12dp&quot; />&#xA;&lt;/shape>&#xA;" />
+</selector>

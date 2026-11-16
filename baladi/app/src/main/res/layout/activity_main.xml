@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/Screen"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="#009688"
+    android:clickable="true"
+    android:focusable="true">
+
+    <!-- Nom de l'application -->
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/logo"  />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="B a l a d i"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFFFF"
+        android:layout_marginTop="15dp"/>
+
+    <!-- Slogan -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ensemble pour une ville meilleure"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#0C1010"
+        android:layout_marginTop="10dp"/>
+
+    <!-- Message de démarrage -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Touchez pour commencer"
+        android:textSize="18sp"
+        android:textColor="#FFFFFFFF"
+        android:textStyle="bold"
+        android:layout_marginTop="60dp"/>
+
+</LinearLayout>
