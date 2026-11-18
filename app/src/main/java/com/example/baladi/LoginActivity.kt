@@ -4,7 +4,6 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
-import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
@@ -14,20 +13,21 @@ import androidx.appcompat.app.AppCompatActivity
             super.onCreate(savedInstanceState)
 
             setContentView(R.layout.activity_login)
-
             // Récupérer les éléments XML
+
+            val btnRegister = findViewById<Button>(R.id.btnRegister)
             val edtEmail = findViewById<EditText>(R.id.edtEmail)
             val edtPassword = findViewById<EditText>(R.id.edtPassword)
             val btnLogin = findViewById<Button>(R.id.btnLogin)
-            val txtRegister = findViewById<TextView>(R.id.txtRegister)
 
             // Cliquer sur S'inscrire
-            txtRegister.setOnClickListener {
+            btnRegister.setOnClickListener {
                 val intent = Intent(this, RegisterActivity::class.java)
                 startActivity(intent)
             }
 
             // Cliquer sur Se connecter
+
 
             btnLogin.setOnClickListener {
 
@@ -45,35 +45,28 @@ import androidx.appcompat.app.AppCompatActivity
 
                 }
 
-                // Vérifier le format de l'adresse e-mail
-                else if (!android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+                // Vérifier les informations du compte
+                else if (email == UserData.email &&
+                    password == UserData.password) {
 
                     Toast.makeText(
                         this,
-                        "Adresse e-mail invalide",
+                        "Connexion réussie",
                         Toast.LENGTH_SHORT
                     ).show()
 
-                }
+                    val intent = Intent(this, ListeActivity ::class.java)
+                    startActivity(intent)
+                    finish()
 
-                // Vérifier la longueur du mot de passe
-                else if (password.length < 6) {
+                } else {
 
                     Toast.makeText(
                         this,
-                        "Le mot de passe doit contenir au moins 6 caractères",
+                        "Email ou mot de passe incorrect",
                         Toast.LENGTH_SHORT
                     ).show()
-
-                }
-
-                // Si toutes les vérifications sont correctes affiche l activite home
-                else {
-                        val intent = Intent(this, HomeActivity::class.java)
-                        startActivity(intent)
-                        finish()
-                    }
-
                 }
             }
         }
+    }

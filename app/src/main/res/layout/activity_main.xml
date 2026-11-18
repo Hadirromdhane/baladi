@@ -38,13 +38,13 @@
         android:layout_marginTop="10dp"/>
 
     <!-- Message de démarrage -->
-    <TextView
+    <Button
+        android:id="@+id/btnCommencer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Touchez pour commencer"
-        android:textSize="18sp"
         android:textColor="#FFFFFFFF"
         android:textStyle="bold"
-        android:layout_marginTop="60dp"/>
+        android:layout_marginTop="50dp"/>
 
 </LinearLayout>

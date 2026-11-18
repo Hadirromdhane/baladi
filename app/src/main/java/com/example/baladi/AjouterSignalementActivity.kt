@@ -17,7 +17,7 @@ class AjouterSignalementActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activityajoutersingnalement)
+        setContentView(R.layout.ajouter_signalement_activity)
 
         val spType = findViewById<Spinner>(R.id.spType)
         val edtAdresse = findViewById<EditText>(R.id.edtAdresse)

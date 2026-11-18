@@ -24,17 +24,7 @@ android:background="">
     android:textSize="26sp"
     android:textStyle="bold"
     android:textColor="#ED1717"
-    android:layout_marginTop="20dp" />
-
-<!-- Sous-titre -->
-<TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="Connectez-vous à votre compte"
-    android:textSize="15sp"
-    android:textColor="#666666"
-    android:layout_marginTop="8dp"
-    android:layout_marginBottom="30dp" />
+    android:layout_marginTop="10dp" />
 
 <!-- Email -->
 <TextView
@@ -43,7 +33,8 @@ android:background="">
     android:text="Adresse e-mail"
     android:textSize="14sp"
     android:textStyle="bold"
-    android:textColor="#333333" />
+    android:textColor="#333333"
+    android:layout_marginTop="10dp" />
 
 <EditText
     android:id="@+id/edtEmail"
@@ -84,7 +75,7 @@ android:background="">
     android:backgroundTint="#ED1717" />
 
     <Button
-        android:id="@+id/txtRegister"
+        android:id="@+id/btnRegister"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Vous n'avez pas de compte ? S'inscrire"
